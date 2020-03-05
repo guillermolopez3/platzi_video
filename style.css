@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    background-color: #8F57FD;
+    font-family: 'Muli', sans-serif;
+}
+
+/* HEADER */
+.header{
+    background-color: #8F57FD;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__img{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.header__menu{
+    margin-right: 30px;
+}
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0 0 0 -14px;
+}
+.header__menu:hover ul, ul:hover{
+    display: block;
+}
+.header__menu li{
+    margin: 10px 0;
+}
+.header__menu li a{
+    color: white;
+    text-decoration: none;
+}
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+.header__menu--profile{
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.header__menu--profile img{
+    margin-right: 8px;
+    width: 40px;
+}
+.header__menu--profile p{
+    margin: 0;
+    color: white;
+}
+
+/* BUSCADOR - MAIN */
+.main{
+    height: 300px;
+}
+.main__title{
+    color: white;
+    font-size: 25px;
+}
+.input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white ;
+    border-radius: 45px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif ;
+    padding: 0px 20px;
+    height: 30px;
+    width: 70%;
+    outline: none;
+}
+::placeholder{
+    color: white;
+}
+
+/* CARROUSEL */
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+.carrousel__container{
+    white-space: nowrap; /*hace que los elementos sigan al costado si no entran el la pantalla*/
+    margin: 70px 0;
+    padding-bottom: 10px;
+}
+.carousel-item{
+    /* background-color: red; */
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor : pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+}
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0, 0);
+}
+.carrousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+.carrousel__container:hover .carousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
